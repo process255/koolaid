@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		14106FCD174C0D1E007ACC55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14106FCC174C0D1E007ACC55 /* Foundation.framework */; };
 		14106FD2174C0D1E007ACC55 /* KoolAid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14106FD1174C0D1E007ACC55 /* KoolAid.h */; };
-		14106FD4174C0D1E007ACC55 /* KoolAid.m in Sources */ = {isa = PBXBuildFile; fileRef = 14106FD3174C0D1E007ACC55 /* KoolAid.m */; };
 		14106FDC174C0D1E007ACC55 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14106FDB174C0D1E007ACC55 /* SenTestingKit.framework */; };
 		14106FDE174C0D1E007ACC55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14106FDD174C0D1E007ACC55 /* UIKit.framework */; };
 		14106FDF174C0D1F007ACC55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14106FCC174C0D1E007ACC55 /* Foundation.framework */; };
 		14106FE2174C0D1F007ACC55 /* libKoolAid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14106FC9174C0D1E007ACC55 /* libKoolAid.a */; };
 		14106FE8174C0D1F007ACC55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14106FE6174C0D1F007ACC55 /* InfoPlist.strings */; };
 		14106FEB174C0D1F007ACC55 /* KoolAidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14106FEA174C0D1F007ACC55 /* KoolAidTests.m */; };
+		14106FF6174C0D71007ACC55 /* KAVersionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14106FF5174C0D71007ACC55 /* KAVersionChecker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +44,7 @@
 /* Begin PBXFileReference section */
 		14106FC9174C0D1E007ACC55 /* libKoolAid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKoolAid.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		14106FCC174C0D1E007ACC55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		14106FD0174C0D1E007ACC55 /* KoolAid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KoolAid-Prefix.pch"; sourceTree = "<group>"; };
 		14106FD1174C0D1E007ACC55 /* KoolAid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoolAid.h; sourceTree = "<group>"; };
-		14106FD3174C0D1E007ACC55 /* KoolAid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KoolAid.m; sourceTree = "<group>"; };
 		14106FDA174C0D1E007ACC55 /* KoolAidTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoolAidTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14106FDB174C0D1E007ACC55 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		14106FDD174C0D1E007ACC55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -54,6 +52,9 @@
 		14106FE7174C0D1F007ACC55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14106FE9174C0D1F007ACC55 /* KoolAidTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoolAidTests.h; sourceTree = "<group>"; };
 		14106FEA174C0D1F007ACC55 /* KoolAidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KoolAidTests.m; sourceTree = "<group>"; };
+		14106FF4174C0D71007ACC55 /* KAVersionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAVersionChecker.h; sourceTree = "<group>"; };
+		14106FF5174C0D71007ACC55 /* KAVersionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAVersionChecker.m; sourceTree = "<group>"; };
+		14106FF8174C0F44007ACC55 /* KoolAid-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KoolAid-Prefix.pch"; path = "Other Sources/KoolAid-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		14106FC0174C0D1E007ACC55 = {
 			isa = PBXGroup;
 			children = (
+				14106FF7174C0E18007ACC55 /* Other Sources */,
 				14106FCE174C0D1E007ACC55 /* KoolAid */,
 				14106FE3174C0D1F007ACC55 /* KoolAidTests */,
 				14106FCB174C0D1E007ACC55 /* Frameworks */,
@@ -112,18 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				14106FD1174C0D1E007ACC55 /* KoolAid.h */,
-				14106FD3174C0D1E007ACC55 /* KoolAid.m */,
-				14106FCF174C0D1E007ACC55 /* Supporting Files */,
+				14106FF4174C0D71007ACC55 /* KAVersionChecker.h */,
+				14106FF5174C0D71007ACC55 /* KAVersionChecker.m */,
 			);
 			path = KoolAid;
-			sourceTree = "<group>";
-		};
-		14106FCF174C0D1E007ACC55 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				14106FD0174C0D1E007ACC55 /* KoolAid-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		14106FE3174C0D1F007ACC55 /* KoolAidTests */ = {
@@ -143,6 +137,14 @@
 				14106FE6174C0D1F007ACC55 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14106FF7174C0E18007ACC55 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				14106FF8174C0F44007ACC55 /* KoolAid-Prefix.pch */,
+			);
+			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14106FD4174C0D1E007ACC55 /* KoolAid.m in Sources */,
+				14106FF6174C0D71007ACC55 /* KAVersionChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

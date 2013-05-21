@@ -6,8 +6,4 @@
 //  Copyright (c) 2013 process255. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface KoolAid : NSObject
-
-@end
+#import <KoolAid/KAVersionChecker.h>
