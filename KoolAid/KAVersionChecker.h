@@ -12,4 +12,6 @@
 
 + (BOOL)isFreshInstall;
 
++ (BOOL)isFirstVersionContainingChecker;
+
 @end

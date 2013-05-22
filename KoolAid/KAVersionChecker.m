@@ -35,5 +35,10 @@
 	return YES;
 }
 
++ (BOOL)isFirstVersionContainingChecker
+{
+	NSString *prevVersion = (NSString *)[[NSUserDefaults standardUserDefaults] valueForKey:kPrevVersion];
+	return prevVersion == nil;
+}
 
 @end
